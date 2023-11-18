@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="backgound__section">
+            <div class="container">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="meni__items"><a href="" class="menu__item">
+                                <div class="logo"><img src="./img/logo_hroshykok.svg" alt=""></div>
+                            </a></li>
+                        <li class="meni__items"><a href="" class="menu__item">Про нас</a></li>
+                        <li class="meni__items"><a href="" class="menu__item">Як отримати кошти</a></li>
+                        <li class="meni__items"><a href="" class="menu__item">Вперед!</a></li>
+                        <li class="meni__items"><a href="" class="menu__item">Партнерство</a></li>
+                        <li class="meni__items"><a href="" class="menu__item">Консультація</a></li>
+                    </ul>
+                </nav>
+                <div class="header-about">
+                    <div class="header-about-l"></div>
+                    <div class="header-about-r">
+                        <div class="calculate-box">
+                            <form action="" class="calculate-form">
+                                <div class="tabs">
+                                    <div class="tab active" data-tab="creditTab">Первый кредит</div>
+                                    <div class="tab" data-tab="existingCustomerTab">Уже клиент</div>
+                                </div>
+
+                                <label for="amount">Сумма в гривнах</label>
+                                <input type="range" id="amount" min="1000" max="5000" step="100" value="1000"
+                                    oninput="updateValue('loanAmount', this.value)">
+
+                                <label for="term">Срок (в днях)</label>
+                                <input type="range" id="term" min="1" max="30" step="1" value="5"
+                                    oninput="updateValue('loanTerm', this.value)">
+
+                                <div id="result">
+                                    <p>Сумма кредита: <span id="loanAmountResult">1000</span> грн</p>
+                                    <p>Сумма возврата: <span id="totalRepaymentResult">1000</span> грн</p>
+                                    <p>Срок: <span id="loanTermResult">5</span> дней</p>
+                                </div>
+                                <button type="button" onclick="calculateLoan()">Оформить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
