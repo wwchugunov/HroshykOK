@@ -1,20 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.backgound__section{
+.backgound__section {
     width: 100%;
-    
+
 
 }
-ul, li a {
+
+ul,
+li a {
     text-decoration: none;
     list-style: none;
 }
 
-.container{
+button {
+    border: none
+}
+
+.container {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,12 +29,12 @@ ul, li a {
     margin: 0 auto;
 }
 
-.header{
+.header {
     width: 100%;
     padding-top: 10px;
 }
 
-.menu{
+.menu {
     width: 100%;
 }
 
@@ -40,148 +46,181 @@ ul, li a {
     color: #093E5B;
 }
 
-.menu__list .menu__item:hover{
+.menu__list .menu__item:hover {
     color: #F7D000;
 }
 
-.header-about{
+.header-about {
     width: 100%;
     display: flex;
 }
-.header-about-l{
+
+.header-about-l {
     width: 50%;
     height: 300px;
 }
 
 
-.header-about-r{
+.header-about-r {
     width: 50%;
     height: 300px;
 
 }
 
-.menu__mobile{
+.menu__mobile {
     display: none;
 }
 
-@media only screen and (max-width: 1000px) {
-    .menu{
-        display: none;
-    }
-    .menu__mobile{
-        display: block;
-    }
-    
+.calculate-box {
+    width: 400px;
+    height: 450px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 
 
-    .nav-bar {
-        position: absolute;
-        background-color: rgb(130, 144, 204);
-        top: 0;
-        right: 100%;
-        height: 100vh;
-        width: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: position 2.9s;
-        -webkit-transition: position 2.9s;
-        -moz-transition: position 2.9s;
-        -ms-transition: position 2.9s;
-        -o-transition: position 2.9s;
-      }
-      
-      .toggle {
-        left: 0;
-        box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
-      
-      }
-      
-      .toggle-menu {
-        background-color: rgba(0, 0, 0, 0.2);
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 40px;
-        height: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-          padding: 2px 2px 2px 3px;
-        border-radius: 5px;
-        cursor: pointer;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-      }
-      
-      .line {
-        width: 100%;
-        height: 3px;
-        border-radius: 5px;
-        background-color: #fff;
-        transition: transform 0.2s ease-out;
-        -webkit-transition: transform 0.2s ease-out;
-        -moz-transition: transform 0.2s ease-out;
-        -ms-transition: transform 0.2s ease-out;
-        -o-transition: transform 0.2s ease-out;
-      }
-      
-      .toggle .line1 {
-        background-color: #000000;
-        transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
-      }
-      
-      .toggle .line2 {
-        display: none;
-      }
-      
-      .toggle .line3 {
-        background-color: #000000;
-        transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
-      }
-      
-      .toggle .toggle-menu {
-        background-color: white;
-      }
-      
-      .nav-list {
-        list-style: none;
-      }
-      
-      .nav-list-item {
-        text-align: center;
-        padding: 10px 0;
-      }
-      
-      .nav-link {
-        color: #093E5B;
-        font-size: 22px;
-        text-decoration: none;
-        position: relative;
-        padding-bottom: 4px;
-      }
-      
-      .nav-link::before {
-        position: absolute;
-        content: '';
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #F7D000;
-        transform: scaleX(0);
-        transition: transform 0.4s ease-in-out;
-        transform-origin: left;
-        -webkit-transition: transform 0.4s ease-in-out;
-        -moz-transition: transform 0.4s ease-in-out;
-        -ms-transition: transform 0.4s ease-in-out;
-        -o-transition: transform 0.4s ease-in-out;
-      }
-      
-      .nav-link:hover::before {
-        transform: scaleX(1);
-      }
+.calculate__btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
+.one {
+    color: white;
+    background: #009bbd;
+    border-radius: 50px 0px 0px 50px;
+    width: 192px;
+    height: 50px;
+    margin-right: -7px;
+    /* Adjust this value as needed */
+}
+
+.all {
+    color: rgb(0, 0, 0);
+    border: solid 1px #009bbd;
+    background: #ffffff;
+    border-radius: 0px 50px 50px 0px;
+    width: 193px;
+    height: 50px;
+    margin-left: -7px;
+    /* Adjust this value as needed */
+}
+
+.slidecontainer {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1px;
+    background: black;
+    /* Цвет полоски */
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    /* Ширина ползунка */
+    height: 20px;
+    /* Высота ползунка */
+    background: blue;
+    /* Цвет ползунка */
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    cursor: pointer;
+}
+
+/* Вспомогательный стиль для отображения значения */
+#output {
+    margin-top: 10px;
+    color: blue;
+}
+
+
+/* Убираем стандартный стиль */
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Общие стили для ползунка */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    /* Ширина ползунка */
+    height: 10px;
+    /* Высота ползунка */
+    background-color: #3498db;
+    /* Цвет ползунка */
+    border-radius: 10%;
+    /* Закругление ползунка (чтобы сделать круглый) */
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #34db3f;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #55db34;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Стилизация для Firefox (противотивляется стандартному стилю) */
+input[type="range"]::-moz-focus-outer {
+    border: 0;
+}
+
+.resuktcredit {
+    display: flex;
+    width: max-content;
+    /* margin-right: 5px; */
+}
+
+.resuktcredit-title,
+.resuktcredit-value {
+    font-size: 25px;
+    margin-right: 5px;
+
+}
+
+
+
+
+
+.slidecontainer-box {
+    margin-top: 54px;
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 47px;
+    text-align: -webkit-right;
+}
+
+
+.info-credit-calculate-for-userinfo-credit-calculate-for-user{
+    display: flex;
+    width: 100%;
 }
