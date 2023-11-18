@@ -4,6 +4,8 @@
     }
     .menu__mobile{
         display: block;
+        position: absolute;
+        z-index: 999;
     }
     
 
