@@ -24,32 +24,35 @@
                         <li class="meni__items"><a href="" class="menu__item">Консультація</a></li>
                     </ul>
                 </nav>
+                <div class="menu__mobile">
+                    <nav class="header__nav nav-bar">
+                        <div class="toggle-menu">
+                          <div class="line line1"></div>
+                          <div class="line line2"></div>
+                          <div class="line line3"></div>
+                        </div>
+                        <ul class="nav-list">
+                          <!-- <li class="nav-list-item"><a href="" class="nav-link">Home</a></li>
+                          <li class="nav-list-item"><a href="" class="nav-link">About</a></li>
+                          <li class="nav-list-item">
+                            <a href="" class="nav-link">Portfolio</a>
+                          </li>
+                          <li class="nav-list-item"><a href="" class="nav-link">About Us</a></li>
+                          <li class="nav-list-item">
+                            <a href="" class="nav-link">Contacts</a>
+                          </li> -->
+                          <li class="nav-list-item"><a href="" class="nav-link">Про нас</a></li>
+                          <li class="nav-list-item"><a href="" class="nav-link">Як отримати кошти</a></li>
+                          <li class="nav-list-item"><a href="" class="nav-link">Вперед!</a></li>
+                          <li class="nav-list-item"><a href="" class="nav-link">Партнерство</a></li>
+                          <li class="nav-list-item"><a href="" class="nav-link">Консультація</a></li>
+                        </ul>
+                      </nav>
+                </div>
                 <div class="header-about">
                     <div class="header-about-l"></div>
                     <div class="header-about-r">
                         <div class="calculate-box">
-                            <form action="" class="calculate-form">
-                                <div class="tabs">
-                                    <div class="tab active" data-tab="creditTab">Первый кредит</div>
-                                    <div class="tab" data-tab="existingCustomerTab">Уже клиент</div>
-                                </div>
-
-                                <label for="amount">Сумма в гривнах</label>
-                                <input type="range" id="amount" min="1000" max="5000" step="100" value="1000"
-                                    oninput="updateValue('loanAmount', this.value)">
-
-                                <label for="term">Срок (в днях)</label>
-                                <input type="range" id="term" min="1" max="30" step="1" value="5"
-                                    oninput="updateValue('loanTerm', this.value)">
-
-                                <div id="result">
-                                    <p>Сумма кредита: <span id="loanAmountResult">1000</span> грн</p>
-                                    <p>Сумма возврата: <span id="totalRepaymentResult">1000</span> грн</p>
-                                    <p>Срок: <span id="loanTermResult">5</span> дней</p>
-                                </div>
-                                <button type="button" onclick="calculateLoan()">Оформить</button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
