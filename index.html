@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,100;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/media.css">
 </head>
@@ -51,6 +58,7 @@
                                 <button class="one">Беру перший раз</button>
                                 <button class="all">Зареєстрований</button>
                             </div>
+
                             <div class="slidecontainer-box">
                                 <div class="slidecontainer">
                                     <div class="resuktcredit">
@@ -58,18 +66,36 @@
                                         <p class="resuktcredit-title">грн</p>
                                     </div>
                                     <input type="range" min="1000" max="5000" value="1000" class="slider" id="myRange1"
-                                        oninput="updateValue('myRange1', 'output1')">
+                                        oninput="updateValue('myRange1', 'output1', 'creditinfoscoupe')">
                                 </div>
                                 <div class="slidecontainer">
                                     <div class="resuktcredit">
                                         <span class="resuktcredit-value" id="output2">15</span>
-                                        <p class="resuktcredit-title"> діб</p>
+                                        <p class="resuktcredit-title"> днів</p>
                                     </div>
-                                    <input type="range" min="1" max="45" value="1" class="slider" id="myRange2"
-                                        oninput="updateValue('myRange2', 'output2')">
+                                    <input type="range" min="1" max="30" value="1" class="slider" id="myRange2"
+                                        oninput="updateValue('myRange2', 'output2', 'creditinfoscoupe')">
                                 </div>
                             </div>
-                            <!-- Результат кредимтования -->
+
+                            <div class="creditinfoscoupe">
+                                <div class="creditbody">
+                                    <div class="creditbodytext">Сума</div>
+                                    <div class="creditbodyvalue" id="creditBodyValue">1000 грн</div>
+                                </div>
+                                <div class="creditline">
+                                    <div class="creditlinetext">На</div>
+                                    <div class="creditlinevalue" id="creditLineValue">1 днів</div>
+                                </div>
+                                <div class="creditpay">
+                                    <div class="creditpaytext">Повернути</div>
+                                    <div class="creditpayvalue" id="creditPayValue">1000</div>
+                                </div>
+                            </div>
+                            <div class="sendformcredit">
+                                <button class="sendformcreditbtn">Отримати кошти</button>
+                            </div>
+
                             <form>
                     </div>
                 </div>

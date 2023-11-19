@@ -78,6 +78,15 @@ button {
     position: relative;
     margin: 0 auto;
     margin-top: 50px;
+    width: max-content;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+    padding: 31px;
+    box-shadow: aliceblue;
+    box-shadow: 9px 11px 5px #c6c6c6;
 }
 
 
@@ -224,4 +233,55 @@ input[type="range"]::-moz-focus-outer {
 .info-credit-calculate-for-userinfo-credit-calculate-for-user{
     display: flex;
     width: 100%;
+}
+
+.sendformcredit{
+    /* width: 100%;
+    orientation: landscape; */
+    margin-top: 60px;
+}
+
+.sendformcreditbtn{
+    background: #009bbd;
+    border-radius: 50px;
+    width: 385px;
+    height: 50px;
+    color: #f7d000;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+
+.creditinfoscoupe{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.creditbody, .creditline, .creditpay{
+    /* display: flex; */
+}
+
+.creditbodytext, .creditlinetext, .creditpaytext{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #009bbd;
+    /* font-size: 27px; */
+    font-weight: 100;
+}
+.creditbodyvalue{
+    color: #34db3f;
+    font-size: 18px;
+
+}
+
+.creditlinevalue{
+    color: blue;
+    font-size: 18px;
+}
+
+.creditpayvalue{
+    color: blueviolet;
+    font-size: 18px;
 }
