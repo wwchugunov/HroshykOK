@@ -131,7 +131,7 @@
     }
 
     .header-about-l {
-        margin-top: -100px;
+        /* margin-top: -100px; */
         width: 100%;
         height: 100vh;
         text-align: center;
@@ -145,5 +145,36 @@
 
     .header-about-r{
         width: 100%;
+    }
+
+
+    .calculate-box {
+        width: 90%;
+        height: 450px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 50px;
+        height: auto;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: aliceblue;
+        box-shadow: 1px -1px 20px 2px #c6c6c6;
+        padding-bottom: 30px;
+        padding-top: 18px;
+        padding-left: 8px;
+        padding-right: 14px;
+    }
+    .sendformcreditbtn {
+        background: #009bbd;
+        border-radius: 50px;
+        width: 300px;
+        height: 50px;
+        color: #f7d000;
+        font-size: 25px;
+        cursor: pointer;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
     }
 }
