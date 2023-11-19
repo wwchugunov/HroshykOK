@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1000px) {
+    .header{
+        width: 100%;
+        position: relative;
+    }
     .menu {
         display: none;
     }
