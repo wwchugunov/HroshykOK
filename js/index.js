@@ -9,20 +9,18 @@ toggleButton.addEventListener('click', function () {
 
 function flyLogo() {
   const logo = document.querySelector('.logoheaderabout');
-  const logoWidth = logo.clientWidth;
-  const logoHeight = logo.clientHeight;
-
-  const maxX = window.innerWidth - logoWidth;
-  const maxY = window.innerHeight - logoHeight;
+  const maxX = window.innerWidth - logo.clientWidth;
+  const maxY = window.innerHeight - logo.clientHeight;
 
   const randomX = Math.random() * maxX;
   const randomY = Math.random() * maxY;
 
-  // Проверяем, чтобы логотип не выходил за границы дисплея
-  const newX = Math.min(maxX, Math.max(0, randomX));
-  const newY = Math.min(maxY, Math.max(0, randomY));
+  logo.style.transition = 'transform 2s ease-in-out';
+  logo.style.transform = `translate(${randomX}px, ${randomY}px)`;
 
-  logo.style.transform = `translate(${newX}px, ${newY}px)`;
+  setTimeout(() => {
+      logo.style.transition = 'none'; // сброс transition после завершения анимации
+  }, 2000);
 }
 
-setInterval(flyLogo, 2000); // Измените интервал по необходимости (в миллисекундах)
+setInterval(flyLogo, 4000); // Измените интервал по необходимости (в миллисекундах)
