@@ -9,8 +9,11 @@ toggleButton.addEventListener('click', function () {
 
 function flyLogo() {
   const logo = document.querySelector('.logoheaderabout');
-  const maxX = window.innerWidth - logo.clientWidth;
-  const maxY = window.innerHeight - logo.clientHeight;
+  const logoWidth = logo.clientWidth;
+  const logoHeight = logo.clientHeight;
+
+  const maxX = window.innerWidth - logoWidth;
+  const maxY = window.innerHeight - logoHeight;
 
   const randomX = Math.random() * maxX;
   const randomY = Math.random() * maxY;
