@@ -47,9 +47,9 @@ function updateValue(sliderId, outputId, blockType) {
 
     // Обновляем соответствующие элементы в каждом блоке
     if (blockType === 'creditinfoscoupe') {
-        const creditAmount = parseFloat(slider.value);
-        const numberOfDays = parseFloat(document.getElementById('output2').innerText);
-        const annualInterestRate = 7; // 700% годовых
+        const creditAmount = 5000; // Исходная сумма кредита
+        const numberOfDays = 30; // Количество дней
+        const annualInterestRate = 700; // 700% годовых
         const dailyInterestRate = (annualInterestRate / 100) / 360;
 
         if (outputId === 'output1') {
@@ -65,6 +65,7 @@ function updateValue(sliderId, outputId, blockType) {
         }
     }
 }
+
 
 
 
