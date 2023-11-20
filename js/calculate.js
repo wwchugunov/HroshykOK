@@ -34,7 +34,6 @@
 
 
 
-
 function updateValue(sliderId, outputId, blockType) {
     const slider = document.getElementById(sliderId);
     const output = document.getElementById(outputId);
@@ -54,7 +53,7 @@ function updateValue(sliderId, outputId, blockType) {
             const totalAmount = creditAmount * dailyInterestRate ** numberOfDays;
 
             creditBodyValue.innerText = slider.value + ' днів';
-            creditPayValue.innerText = totalAmount.toFixed(2) + ' грн';
+            creditPayValue.innerText = (totalAmount - creditAmount).toFixed(2) + ' грн';
         } else if (outputId === 'output2') {
             const creditAmount = parseFloat(document.getElementById('output1').innerText);
             const numberOfDays = parseFloat(slider.value);
@@ -63,10 +62,11 @@ function updateValue(sliderId, outputId, blockType) {
             const totalAmount = creditAmount * dailyInterestRate ** numberOfDays;
 
             creditLineValue.innerText = slider.value + ' днів';
-            creditPayValue.innerText = totalAmount.toFixed(2) + ' грн';
+            creditPayValue.innerText = (totalAmount - creditAmount).toFixed(2) + ' грн';
         }
     }
 }
+
 
 
 
