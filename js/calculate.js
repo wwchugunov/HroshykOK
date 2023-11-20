@@ -53,16 +53,14 @@ function updateValue(sliderId, outputId, blockType) {
         const dailyInterestRate = (annualInterestRate / 100) / 360;
 
         if (outputId === 'output1') {
-            const interestAmount = creditAmount * dailyInterestRate * numberOfDays;
-            const totalAmount = creditAmount + interestAmount;
+            const totalAmount = creditAmount * (1 + dailyInterestRate) ** numberOfDays;
 
             creditBodyValue.innerText = slider.value + ' днів';
             creditPayValue.innerText = totalAmount.toFixed(2) + ' грн';
         } else if (outputId === 'output2') {
-            creditLineValue.innerText = slider.value + ' днів';
-            const interestAmount = creditAmount * dailyInterestRate * numberOfDays;
-            const totalAmount = creditAmount + interestAmount;
+            const totalAmount = creditAmount * (1 + dailyInterestRate) ** slider.value;
 
+            creditLineValue.innerText = slider.value + ' днів';
             creditPayValue.innerText = totalAmount.toFixed(2) + ' грн';
         }
     }
