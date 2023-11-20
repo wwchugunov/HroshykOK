@@ -34,6 +34,7 @@
 
 
 
+
 function updateValue(sliderId, outputId, blockType) {
     const slider = document.getElementById(sliderId);
     const output = document.getElementById(outputId);
@@ -49,7 +50,7 @@ function updateValue(sliderId, outputId, blockType) {
             const creditAmount = parseFloat(slider.value);
             const numberOfDays = parseFloat(document.getElementById('output2').innerText);
             const annualInterestRate = 7; // 700% годовых
-            const interestAmount = (creditAmount * annualInterestRate * numberOfDays) / 360;
+            const interestAmount = (creditAmount * annualInterestRate * numberOfDays) / 365;
             const totalAmount = creditAmount + interestAmount;
 
             creditBodyValue.innerText = slider.value + ' днів';
@@ -66,8 +67,6 @@ function updateValue(sliderId, outputId, blockType) {
         }
     }
 }
-
-
 
 
 
