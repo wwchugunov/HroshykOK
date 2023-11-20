@@ -305,3 +305,15 @@ input[type="range"]::-moz-focus-outer {
 .header-about-llist{
     
 }
+
+
+.logoheaderabout {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+}

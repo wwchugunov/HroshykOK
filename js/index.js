@@ -7,9 +7,15 @@ toggleButton.addEventListener('click', function () {
 
 
 
-  function openModal() {
-    // Открываем модальные окна
-    $('#modal1').modal('show');
-    $('#modal2').modal('show');
-    // Можете добавить сколько угодно модальных окон по аналогии
-  }
+  function flyLogo() {
+    const logo = document.querySelector('.logoheaderabout');
+    const maxX = window.innerWidth - logo.clientWidth;
+    const maxY = window.innerHeight - logo.clientHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    logo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+}
+
+setInterval(flyLogo, 2000); // Change the interval as needed (milliseconds)
