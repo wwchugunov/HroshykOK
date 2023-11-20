@@ -7,20 +7,19 @@ toggleButton.addEventListener('click', function () {
 
 
 
-function flyLogo() {
-  const logo = document.querySelector('.logoheaderabout');
-  const maxX = window.innerWidth - logo.clientWidth;
-  const maxY = window.innerHeight - logo.clientHeight;
+const logo = document.querySelector('.logoheaderabout');
 
-  const randomX = Math.random() * maxX;
-  const randomY = Math.random() * maxY;
+logo.addEventListener('mouseover', () => {
+    const maxX = window.innerWidth - logo.clientWidth;
+    const maxY = window.innerHeight - logo.clientHeight;
 
-  logo.style.transition = 'transform 2s ease-in-out';
-  logo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
 
-  setTimeout(() => {
-      logo.style.transition = 'none'; // сброс transition после завершения анимации
-  }, 2000);
-}
+    logo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+});
 
-setInterval(flyLogo, 4000); // Измените интервал по необходимости (в миллисекундах)
+logo.addEventListener('transitionend', () => {
+    // Возвращаем логотип в верхнюю часть экрана после завершения анимации
+    logo.style.transform = 'translateX(-50%)';
+});

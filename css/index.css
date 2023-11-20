@@ -308,7 +308,9 @@ input[type="range"]::-moz-focus-outer {
 
 
 .logoheaderabout{
+    
     width: 300px;
     display: block;
     margin: 0 auto;
+    position: fixed;
 }
