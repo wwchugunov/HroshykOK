@@ -7,4 +7,9 @@ toggleButton.addEventListener('click', function () {
 
 
 
-
+  function openModal() {
+    // Открываем модальные окна
+    $('#modal1').modal('show');
+    $('#modal2').modal('show');
+    // Можете добавить сколько угодно модальных окон по аналогии
+  }
