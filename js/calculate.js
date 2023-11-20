@@ -32,8 +32,16 @@
 //     }
 // }
 
+function updateValue(sliderId, outputId, blockType) {
+    const slider = document.getElementById(sliderId);
+    const output = document.getElementById(outputId);
+    const creditBodyValue = document.getElementById('creditBodyValue');
+    const creditLineValue = document.getElementById('creditLineValue');
+    const creditPayValue = document.getElementById('creditPayValue');
 
-if (blockType === 'creditinfoscoupe') {
+    output.innerText = slider.value;
+
+    // Обновляем соответствующие элементы в каждом блоке
 if (blockType === 'creditinfoscoupe') {
     if (outputId === 'output1') {
         const creditAmount = parseFloat(slider.value);
@@ -56,4 +64,6 @@ if (blockType === 'creditinfoscoupe') {
     }
 }
 }
+
+
 
