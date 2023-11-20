@@ -50,7 +50,8 @@ function updateValue(sliderId, outputId, blockType) {
             const creditAmount = parseFloat(slider.value);
             const numberOfDays = parseFloat(document.getElementById('output2').innerText);
             const annualInterestRate = 7; // 700% годовых
-            const interestAmount = (creditAmount * annualInterestRate * numberOfDays) / 365;
+            const dailyInterestRate = annualInterestRate / 365;
+            const interestAmount = creditAmount * dailyInterestRate * numberOfDays;
             const totalAmount = creditAmount + interestAmount;
 
             creditBodyValue.innerText = slider.value + ' днів';
@@ -59,7 +60,8 @@ function updateValue(sliderId, outputId, blockType) {
             const creditAmount = parseFloat(document.getElementById('output1').innerText);
             const numberOfDays = parseFloat(slider.value);
             const annualInterestRate = 7; // 700% годовых
-            const interestAmount = (creditAmount * annualInterestRate * numberOfDays) / 365;
+            const dailyInterestRate = annualInterestRate / 365;
+            const interestAmount = creditAmount * dailyInterestRate * numberOfDays;
             const totalAmount = creditAmount + interestAmount;
 
             creditLineValue.innerText = slider.value + ' днів';
@@ -67,6 +69,7 @@ function updateValue(sliderId, outputId, blockType) {
         }
     }
 }
+
 
 
 
